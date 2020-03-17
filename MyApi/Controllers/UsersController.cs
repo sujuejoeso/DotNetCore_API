@@ -82,7 +82,7 @@ namespace MyApi.Controllers
             _context.TodoItems.Add(user);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUser", new { id = user.id }, user);
+            return CreatedAtAction(nameof(GetUser), new { id = user.id }, user);
         }
 
         // DELETE: api/Users/5
